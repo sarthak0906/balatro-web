@@ -47,3 +47,60 @@ export const RANKS = {
   THREE: 3,
   TWO: 2
 }
+
+export const EDITIONS = {
+  BASE: {
+    fileName: "base",
+    trigger: () => {
+      
+    },
+  },
+  BONUS: {
+    fileName: "bonus",
+    trigger: () => {
+      
+    },
+  },
+  GLASS: {
+    fileName: "glass",
+    trigger: () => {
+      
+    },
+  },
+  GOLD: {
+    fileName: "gold",
+    trigger: () => {
+      
+    },
+  },
+  LUCKY: {
+    fileName: "lucky",
+    trigger: () => {
+      
+    },
+  },
+  MULT: {
+    fileName: "mult",
+    trigger: () => {
+      
+    },
+  },
+  STEEL: {
+    fileName: "steel",
+    trigger: () => {
+      
+    },
+  },
+  STONE: {
+    fileName: "stone",
+    trigger: () => {
+      
+    },
+  },
+  WILD: {
+    fileName: "wild",
+    trigger: () => {
+      
+    },
+  },
+}

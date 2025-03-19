@@ -19,7 +19,6 @@ export const useGameState = () => {
       const newPlayed = [...playedCards, card];
       client.setQueryData(HAND_KEY, newHand);
       client.setQueryData(PLAYED_KEY, newPlayed);
-      console.log(client.getQueryData(PLAYED_KEY));
       return { hand: newHand, played: newPlayed };
     },
   });

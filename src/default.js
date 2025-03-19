@@ -1,264 +1,59 @@
 import { RANKS, SUITS } from "./constant";
 
 export const defaultDeck = [
-  {
-    Rank: RANKS.ACE,
-    Suit: SUITS.HEART,
-    Chips: 11
-  },
-  {
-    Rank: RANKS.KING,
-    Suit: SUITS.HEART,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.QUEEN,
-    Suit: SUITS.HEART,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.JACK,
-    Suit: SUITS.HEART,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.TEN,
-    Suit: SUITS.HEART,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.NINE,
-    Suit: SUITS.HEART,
-    Chips: 9
-  },
-  {
-    Rank: RANKS.EIGHT,
-    Suit: SUITS.HEART,
-    Chips: 8
-  },
-  {
-    Rank: RANKS.SEVEN,
-    Suit: SUITS.HEART,
-    Chips: 7
-  },
-  {
-    Rank: RANKS.SIX,
-    Suit: SUITS.HEART,
-    Chips: 6
-  },
-  {
-    Rank: RANKS.FIVE,
-    Suit: SUITS.HEART,
-    Chips: 5
-  },
-  {
-    Rank: RANKS.FOUR,
-    Suit: SUITS.HEART,
-    Chips: 4
-  },
-  {
-    Rank: RANKS.THREE,
-    Suit: SUITS.HEART,
-    Chips: 3
-  },
-  {
-    Rank: RANKS.TWO,
-    Suit: SUITS.HEART,
-    Chips: 2
-  },
-  {
-    Rank: RANKS.ACE,
-    Suit: SUITS.SPADE,
-    Chips: 11
-  },
-  {
-    Rank: RANKS.KING,
-    Suit: SUITS.SPADE,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.QUEEN,
-    Suit: SUITS.SPADE,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.JACK,
-    Suit: SUITS.SPADE,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.TEN,
-    Suit: SUITS.SPADE,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.NINE,
-    Suit: SUITS.SPADE,
-    Chips: 9
-  },
-  {
-    Rank: RANKS.EIGHT,
-    Suit: SUITS.SPADE,
-    Chips: 8
-  },
-  {
-    Rank: RANKS.SEVEN,
-    Suit: SUITS.SPADE,
-    Chips: 7
-  },
-  {
-    Rank: RANKS.SIX,
-    Suit: SUITS.SPADE,
-    Chips: 6
-  },
-  {
-    Rank: RANKS.FIVE,
-    Suit: SUITS.SPADE,
-    Chips: 5
-  },
-  {
-    Rank: RANKS.FOUR,
-    Suit: SUITS.SPADE,
-    Chips: 4
-  },
-  {
-    Rank: RANKS.THREE,
-    Suit: SUITS.SPADE,
-    Chips: 3
-  },
-  {
-    Rank: RANKS.TWO,
-    Suit: SUITS.SPADE,
-    Chips: 2
-  },
-  {
-    Rank: RANKS.ACE,
-    Suit: SUITS.DIAMOND,
-    Chips: 11
-  },
-  {
-    Rank: RANKS.KING,
-    Suit: SUITS.DIAMOND,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.QUEEN,
-    Suit: SUITS.DIAMOND,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.JACK,
-    Suit: SUITS.DIAMOND,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.TEN,
-    Suit: SUITS.DIAMOND,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.NINE,
-    Suit: SUITS.DIAMOND,
-    Chips: 9
-  },
-  {
-    Rank: RANKS.EIGHT,
-    Suit: SUITS.DIAMOND,
-    Chips: 8
-  },
-  {
-    Rank: RANKS.SEVEN,
-    Suit: SUITS.DIAMOND,
-    Chips: 7
-  },
-  {
-    Rank: RANKS.SIX,
-    Suit: SUITS.DIAMOND,
-    Chips: 6
-  },
-  {
-    Rank: RANKS.FIVE,
-    Suit: SUITS.DIAMOND,
-    Chips: 5
-  },
-  {
-    Rank: RANKS.FOUR,
-    Suit: SUITS.DIAMOND,
-    Chips: 4
-  },
-  {
-    Rank: RANKS.THREE,
-    Suit: SUITS.DIAMOND,
-    Chips: 3
-  },
-  {
-    Rank: RANKS.TWO,
-    Suit: SUITS.DIAMOND,
-    Chips: 2
-  },
-  {
-    Rank: RANKS.ACE,
-    Suit: SUITS.CLUB,
-    Chips: 11
-  },
-  {
-    Rank: RANKS.KING,
-    Suit: SUITS.CLUB,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.QUEEN,
-    Suit: SUITS.CLUB,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.JACK,
-    Suit: SUITS.CLUB,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.TEN,
-    Suit: SUITS.CLUB,
-    Chips: 10
-  },
-  {
-    Rank: RANKS.NINE,
-    Suit: SUITS.CLUB,
-    Chips: 9
-  },
-  {
-    Rank: RANKS.EIGHT,
-    Suit: SUITS.CLUB,
-    Chips: 8
-  },
-  {
-    Rank: RANKS.SEVEN,
-    Suit: SUITS.CLUB,
-    Chips: 7
-  },
-  {
-    Rank: RANKS.SIX,
-    Suit: SUITS.CLUB,
-    Chips: 6
-  },
-  {
-    Rank: RANKS.FIVE,
-    Suit: SUITS.CLUB,
-    Chips: 5
-  },
-  {
-    Rank: RANKS.FOUR,
-    Suit: SUITS.CLUB,
-    Chips: 4
-  },
-  {
-    Rank: RANKS.THREE,
-    Suit: SUITS.CLUB,
-    Chips: 3
-  },
-  {
-    Rank: RANKS.TWO,
-    Suit: SUITS.CLUB,
-    Chips: 2
-  },
-]
+  { id: 1, Rank: RANKS.TWO,   Suit: SUITS.HEART,   Chips: 2,  filename: '2H.png' },
+  { id: 2, Rank: RANKS.THREE, Suit: SUITS.HEART,   Chips: 3,  filename: '3H.png' },
+  { id: 3, Rank: RANKS.FOUR,  Suit: SUITS.HEART,   Chips: 4,  filename: '4H.png' },
+  { id: 4, Rank: RANKS.FIVE,  Suit: SUITS.HEART,   Chips: 5,  filename: '5H.png' },
+  { id: 5, Rank: RANKS.SIX,   Suit: SUITS.HEART,   Chips: 6,  filename: '6H.png' },
+  { id: 6, Rank: RANKS.SEVEN, Suit: SUITS.HEART,   Chips: 7,  filename: '7H.png' },
+  { id: 7, Rank: RANKS.EIGHT, Suit: SUITS.HEART,   Chips: 8,  filename: '8H.png' },
+  { id: 8, Rank: RANKS.NINE,  Suit: SUITS.HEART,   Chips: 9,  filename: '9H.png' },
+  { id: 9, Rank: RANKS.TEN,   Suit: SUITS.HEART,   Chips: 10, filename: '10H.png' },
+  { id: 10, Rank: RANKS.JACK,  Suit: SUITS.HEART,   Chips: 10, filename: 'JH.png' },
+  { id: 11, Rank: RANKS.QUEEN, Suit: SUITS.HEART,   Chips: 10, filename: 'QH.png' },
+  { id: 12, Rank: RANKS.KING,  Suit: SUITS.HEART,   Chips: 10, filename: 'KH.png' },
+  { id: 13, Rank: RANKS.ACE,   Suit: SUITS.HEART,   Chips: 11, filename: 'AH.png' },
+
+  { id: 14, Rank: RANKS.TWO,   Suit: SUITS.SPADE,   Chips: 2,  filename: '2S.png' },
+  { id: 15, Rank: RANKS.THREE, Suit: SUITS.SPADE,   Chips: 3,  filename: '3S.png' },
+  { id: 16, Rank: RANKS.FOUR,  Suit: SUITS.SPADE,   Chips: 4,  filename: '4S.png' },
+  { id: 17, Rank: RANKS.FIVE,  Suit: SUITS.SPADE,   Chips: 5,  filename: '5S.png' },
+  { id: 18, Rank: RANKS.SIX,   Suit: SUITS.SPADE,   Chips: 6,  filename: '6S.png' },
+  { id: 19, Rank: RANKS.SEVEN, Suit: SUITS.SPADE,   Chips: 7,  filename: '7S.png' },
+  { id: 20, Rank: RANKS.EIGHT, Suit: SUITS.SPADE,   Chips: 8,  filename: '8S.png' },
+  { id: 21, Rank: RANKS.NINE,  Suit: SUITS.SPADE,   Chips: 9,  filename: '9S.png' },
+  { id: 22, Rank: RANKS.TEN,   Suit: SUITS.SPADE,   Chips: 10, filename: '10S.png' },
+  { id: 23, Rank: RANKS.JACK,  Suit: SUITS.SPADE,   Chips: 10, filename: 'JS.png' },
+  { id: 24, Rank: RANKS.QUEEN, Suit: SUITS.SPADE,   Chips: 10, filename: 'QS.png' },
+  { id: 25, Rank: RANKS.KING,  Suit: SUITS.SPADE,   Chips: 10, filename: 'KS.png' },
+  { id: 26, Rank: RANKS.ACE,   Suit: SUITS.SPADE,   Chips: 11, filename: 'AS.png' },
+
+  { id: 27, Rank: RANKS.TWO,   Suit: SUITS.DIAMOND, Chips: 2,  filename: '2D.png' },
+  { id: 28, Rank: RANKS.THREE, Suit: SUITS.DIAMOND, Chips: 3,  filename: '3D.png' },
+  { id: 29, Rank: RANKS.FOUR,  Suit: SUITS.DIAMOND, Chips: 4,  filename: '4D.png' },
+  { id: 30, Rank: RANKS.FIVE,  Suit: SUITS.DIAMOND, Chips: 5,  filename: '5D.png' },
+  { id: 31, Rank: RANKS.SIX,   Suit: SUITS.DIAMOND, Chips: 6,  filename: '6D.png' },
+  { id: 32, Rank: RANKS.SEVEN, Suit: SUITS.DIAMOND, Chips: 7,  filename: '7D.png' },
+  { id: 33, Rank: RANKS.EIGHT, Suit: SUITS.DIAMOND, Chips: 8,  filename: '8D.png' },
+  { id: 34, Rank: RANKS.NINE,  Suit: SUITS.DIAMOND, Chips: 9,  filename: '9D.png' },
+  { id: 35, Rank: RANKS.TEN,   Suit: SUITS.DIAMOND, Chips: 10, filename: '10D.png' },
+  { id: 36, Rank: RANKS.JACK,  Suit: SUITS.DIAMOND, Chips: 10, filename: 'JD.png' },
+  { id: 37, Rank: RANKS.QUEEN, Suit: SUITS.DIAMOND, Chips: 10, filename: 'QD.png' },
+  { id: 38, Rank: RANKS.KING,  Suit: SUITS.DIAMOND, Chips: 10, filename: 'KD.png' },
+  { id: 39, Rank: RANKS.ACE,   Suit: SUITS.DIAMOND, Chips: 11, filename: 'AD.png' },
+
+  { id: 40, Rank: RANKS.TWO,   Suit: SUITS.CLUB,    Chips: 2,  filename: '2C.png' },
+  { id: 41, Rank: RANKS.THREE, Suit: SUITS.CLUB,    Chips: 3,  filename: '3C.png' },
+  { id: 42, Rank: RANKS.FOUR,  Suit: SUITS.CLUB,    Chips: 4,  filename: '4C.png' },
+  { id: 43, Rank: RANKS.FIVE,  Suit: SUITS.CLUB,    Chips: 5,  filename: '5C.png' },
+  { id: 44, Rank: RANKS.SIX,   Suit: SUITS.CLUB,    Chips: 6,  filename: '6C.png' },
+  { id: 45, Rank: RANKS.SEVEN, Suit: SUITS.CLUB,    Chips: 7,  filename: '7C.png' },
+  { id: 46, Rank: RANKS.EIGHT, Suit: SUITS.CLUB,    Chips: 8,  filename: '8C.png' },
+  { id: 47, Rank: RANKS.NINE,  Suit: SUITS.CLUB,    Chips: 9,  filename: '9C.png' },
+  { id: 48, Rank: RANKS.TEN,   Suit: SUITS.CLUB,    Chips: 10, filename: '10C.png' },
+  { id: 49, Rank: RANKS.JACK,  Suit: SUITS.CLUB,    Chips: 10, filename: 'JC.png' },
+  { id: 50, Rank: RANKS.QUEEN, Suit: SUITS.CLUB,    Chips: 10, filename: 'QC.png' },
+  { id: 51, Rank: RANKS.KING,  Suit: SUITS.CLUB,    Chips: 10, filename: 'KC.png' },
+  { id: 52, Rank: RANKS.ACE,   Suit: SUITS.CLUB,    Chips: 11, filename: 'AC.png' },
+];

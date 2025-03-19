@@ -64,12 +64,12 @@ body {
   height: 120px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 }
 
 .joker-card {
@@ -104,6 +104,7 @@ body {
 
 .hand-card-hover {
   transform: translateY(-20%);
+  z-index: 10; /* Elevate above other cards */
 }
 
 .game-controls {
@@ -130,4 +131,109 @@ body {
 .btn:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
+}
+
+.hand {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 20px;
+  height: 150px; /* slightly higher than card */
+  overflow: visible; /* allow elevation on hover */
+  position: relative;
+  z-index: 1;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 80px;
+  height: 120px;
+  transform-origin: bottom center;
+  overflow: visible;
+  z-index: 2;
+}
+
+.card {
+  position: relative; /* THIS is key */
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: visible;
+  z-index: 3;
+}
+
+.card-layer {
+  position: relative; /* allows stacking inside .card */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 5; /* ensure it appears above everything */
+  pointer-events: none;
+}
+
+.hand {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12px;
+  height: 140px;
+  position: relative;
+}
+
+.card-wrapper {
+  transition: transform 0.25s ease-in-out;
+  position: relative;
+  cursor: grab;
+}
+
+.hand {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  height: 150px;
+}
+
+.card-wrapper {
+  cursor: grab;
+}
+
+.hand-card {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card {
+  position: relative;
+  width: 80px;
+  height: 120px;
+}
+
+.card-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none; /* Important for drag-and-drop to stay smooth */
+}
+
+.card-base {
+  z-index: 3;
+}
+
+.card-edition {
+  z-index: 2;
+}
+
+.card-enhancement {
+  z-index: 1;
+}
+
+.card-seal {
+  z-index: 0;
 }
