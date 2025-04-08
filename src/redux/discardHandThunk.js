@@ -1,4 +1,4 @@
-import { discardHand, drawHand } from "./gameSlice";
+import { discardHand, drawHand, sortHand } from "./gameSlice";
 
 export const handleDiscardHand = () => (dispatch, getState) => {
   const state = getState().game;
@@ -8,6 +8,7 @@ export const handleDiscardHand = () => (dispatch, getState) => {
 
   dispatch(discardHand());
   dispatch(drawHand());
+  dispatch(sortHand());
 
   const updatedState = getState().game;
   console.log("Updated Hand Cards:", updatedState.handCards);

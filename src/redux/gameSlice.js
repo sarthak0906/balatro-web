@@ -1,17 +1,27 @@
 import * as _ from 'underscore';
 import { createSlice } from '@reduxjs/toolkit';
 import { defaultDeck } from '../default';
+import { HAND_TYPES } from '../constant';
+import { getPokerHandType } from '../utils';
 
 const initialState = {
   hands: 0,
   totalHands: 4,
   discards: 0,
   totalDiscards: 3,
+  roundScore: 0,
+  roundGoal: 300,
+  roundReward: 4,
   handSize: 8,
+  currentHandType: HAND_TYPES.NONE,
+  handChip: 0,
+  handMult: 0,
   round: 0,
   ante: 0,
+  money: 0,
   deck: defaultDeck,
   remainingDeck: defaultDeck,
+  handTypes: HAND_TYPES,
   handCards: [],
   selectedCards: [],
   playedCards: [],
@@ -38,6 +48,10 @@ export const gameSlice = createSlice({
       if (!card.selectCard && selectedCount >= 5) return;
       card.selectCard = !card.selectCard;
       state.selectedCards = state.handCards.filter(el => el.selectCard);
+      let currentHandType = getPokerHandType(state.selectedCards, state.handTypes);
+      state.currentHandType = currentHandType;
+      state.handChip = currentHandType.base_chips;
+      state.handMult = currentHandType.base_mult;
     },
     playCard: (state, action) => {
       const card = action.payload;
@@ -69,11 +83,11 @@ export const gameSlice = createSlice({
       state.selectedCards = state.handCards.filter(el => el.selectCard);
     },
     playHand: (state) => {
-      console.log("Selected Cards:", state.selectedCards);
-      console.log("Hand Cards:", state.handCards);
-      console.log("Played Cards:", state.playedCards);
-      console.log("Discards:", state.discards);
-    },
+      const selected = state.selectedCards;
+      state.handCards = state.handCards.filter(card => !card.selectCard);
+      state.playedCards = selected;
+      state.selectedCards = [];
+    },    
     discardHand: (state, action) => {
       let handCards = state.handCards;
       let selectedCards = state.selectedCards.map(el => el.id);
@@ -88,7 +102,10 @@ export const gameSlice = createSlice({
 
       const handCards = state.remainingDeck.slice(0, cardsToBeDrawn);
       state.handCards.push(...handCards);
-      state.remainingDeck = state.deck.slice(cardsToBeDrawn + 1);
+      state.remainingDeck = state.remainingDeck.slice(cardsToBeDrawn + 1);
+    },
+    updateRoundScore: (state, action) => {
+      state.roundScore += action.payload;
     }
   },
 });
@@ -105,7 +122,8 @@ export const {
   reorderHandCards,
   playHand,
   discardHand,
-  drawHand
+  drawHand,
+  updateRoundScore
 } = gameSlice.actions;
 
 export default gameSlice.reducer;

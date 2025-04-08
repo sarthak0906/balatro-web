@@ -33,7 +33,7 @@ export const SUITS = {
 } 
 
 export const RANKS = {
-  ACE: 15,
+  ACE: 14,
   KING: 13,
   QUEEN: 12,
   JACK: 11,
@@ -48,59 +48,147 @@ export const RANKS = {
   TWO: 2
 }
 
+export const HAND_TYPES = {
+  NONE: {
+    base_chips: 0,
+    base_mult: 0,
+    name: "",
+    level: 0
+  },
+  HIGH_CARD: {
+    base_chips: 5,
+    base_mult: 1,
+    name: "High Card",
+    level: 1
+  },
+  PAIR: {
+    base_chips: 10,
+    base_mult: 2,
+    name: "Pair",
+    level: 1
+  },
+  TWO_PAIR: {
+    base_chips: 20,
+    base_mult: 2,
+    name: "Two Pair",
+    level: 1
+  },
+  THREE_OF_KIND: {
+    base_chips: 30,
+    base_mult: 3,
+    name: "Three of a Kind",
+    level: 1
+  },
+  STRAIGHT: {
+    base_chips: 30,
+    base_mult: 4,
+    name: "Straight",
+    level: 1
+  },
+  FLUSH: {
+    base_chips: 35,
+    base_mult: 4,
+    name: "Flush",
+    level: 1
+  },
+  FULL_HOUSE: {
+    base_chips: 40,
+    base_mult: 4,
+    name: "Full House",
+    level: 1
+  },
+  FOUR_OF_KIND: {
+    base_chips: 60,
+    base_mult: 7,
+    name: "Four of a Kind",
+    level: 1
+  },
+  STRAIGHT_FLUSH: {
+    base_chips: 100,
+    base_mult: 8,
+    name: "Straight Flush",
+    level: 1
+  },
+  ROYAL_FLUSH: {
+    base_chips: 100,
+    base_mult: 8,
+    name: "Royal Flush",
+    level: 1
+  },
+  FIVE_OF_KIND: {
+    base_chips: 120,
+    base_mult: 12,
+    name: "Five of a Kind",
+    level: 1
+  },
+  FLUSH_HOUSE: {
+    base_chips: 140,
+    base_mult: 14,
+    name: "Flush House",
+    level: 1
+  },
+  FLUSH_FIVE: {
+    base_chips: 160,
+    base_mult: 16,
+    name: "Flush Five",
+    level: 1
+  }
+};
+
+
 export const EDITIONS = {
   BASE: {
     fileName: "base",
     trigger: () => {
-      
+
     },
   },
   BONUS: {
     fileName: "bonus",
     trigger: () => {
-      
+
     },
   },
   GLASS: {
     fileName: "glass",
     trigger: () => {
-      
+
     },
   },
   GOLD: {
     fileName: "gold",
     trigger: () => {
-      
+
     },
   },
   LUCKY: {
     fileName: "lucky",
     trigger: () => {
-      
+
     },
   },
   MULT: {
     fileName: "mult",
     trigger: () => {
-      
+
     },
   },
   STEEL: {
     fileName: "steel",
     trigger: () => {
-      
+
     },
   },
   STONE: {
     fileName: "stone",
     trigger: () => {
-      
+
     },
   },
   WILD: {
     fileName: "wild",
     trigger: () => {
-      
+
     },
   },
 }

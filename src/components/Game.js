@@ -6,7 +6,7 @@ import Jokers from './Jokers';
 import PlayedCards from './PlayedCards';
 import Hand from './Hand';
 import GameControls from './GameControls';
-import { setInitialDeck, startRound } from "../redux/gameSlice";
+import { setInitialDeck, sortHand, startRound } from "../redux/gameSlice";
 import Consumables from './Consumables';
 
 const Game = ({initialDeck}) => {
@@ -16,6 +16,7 @@ const Game = ({initialDeck}) => {
     if (initialDeck && initialDeck.length > 0) {
       dispatch(setInitialDeck(initialDeck));
       dispatch(startRound());
+      dispatch(sortHand());
     }
   }, [dispatch, initialDeck]);
 

@@ -68,3 +68,58 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Redux States and Slices
+
+## App States
+
+- Game Speed
+- Language
+- Card Designs
+- Color Blind Modes
+- Stats
+  * Best Hand (Highest Score)
+  * Highest Round
+  * Highest Ante
+  * Total Played Hand Types Count
+  * Most Money
+  * Best Win Streak
+  * Progess (Game Completion Percentage)
+  * Collection Percentage (Game Collection / Codex)
+  * Challanges (Challange Completion Percentage)
+  * Joker Stickers (Joker Stickers Completion Percentage)
+  * Win Percentage (Deck Win Percentage)
+- Card Stats
+  * Jokers Used (Number of Rounds completed with Certain Joker)
+  * Consumables (Number of Times Consumable card being used)
+  * Tarrots (Number of Times Tarrot card being used)
+  * Planets (Number of Times Planet card being used)
+  * Spectrals (Number of Times Spectral card being used)
+  * Vouchers (Number of Times Voucher redeemed)
+- Collections
+  * Jokers (Jokers unlocked)
+  * Decks (Decks unlocked)
+  * Vouchers (Vouchers unlocked and redeemed at least once)
+  * Tarrots (Tarrots unlocked)
+  * Planets (Planets unlocked)
+  * Spectrals (Spectrals unlocked)
+  * Booster Packs (Booster Packs unlocked)
+  * Tags (Tags unlocked and redeemed)
+  * Blinds (Blinds unlocked and Played)
+
+## Game States
+- Current Ante
+- Current Round
+- Hand Size
+- Total Hands
+- Total Discards
+- Total Money
+- Deck
+- Jokers
+- Consumables
+- Hand Strengths
+- Vouchers Redeemed
+- Active Tags
+- Most Played Hand Type
+- Hand Types and number of times played
+- 
